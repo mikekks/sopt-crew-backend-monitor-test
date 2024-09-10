@@ -9,4 +9,4 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 COPY --from=build /app/build/libs/*.jar app.jar
 
-ENTRYPOINT ["java","-jar", "$JAVA_OPTS", "/app/app.jar"]
+ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar /app/app.jar"]
