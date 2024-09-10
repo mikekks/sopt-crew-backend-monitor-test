@@ -25,5 +25,4 @@ public interface AdvertisementApi {
 	})
 	ResponseEntity<AdvertisementsGetResponseDto> getAdvertisement(@RequestParam(name = "category", required = true) AdvertisementCategory category,
 		Principal principal);
-
 }
