@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . /app
 RUN ./gradlew build -x test
 
-ENV JAVA_OPTS="-javaagent:/pinpoint-agent/pinpoint-bootstrap-2.5.4.jar -Dpinpoint.agentId=app-in-docker -Dpinpoint.applicationName=monitorapp -Dpinpoint.profiler.profiles.active=release"
+ENV JAVA_OPTS="-javaagent:/pinpoint-agent/pinpoint-bootstrap-2.3.3.jar -Dpinpoint.agentId=app-in-docker -Dpinpoint.applicationName=monitorapp -Dpinpoint.profiler.profiles.active=release"
 
 FROM openjdk:17-jdk-slim
 WORKDIR /app
